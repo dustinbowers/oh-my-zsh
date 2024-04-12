@@ -222,11 +222,3 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   -------------------------------------------------------------------
     httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ; }
 
-
-# Enable this for Rust development
-. "$HOME/.cargo/env"
-
-# opam configuration
-test -r /Users/dustinbowers/.opam/opam-init/init.sh && . /Users/dustinbowers/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-
-
