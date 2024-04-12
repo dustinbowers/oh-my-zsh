@@ -1,1 +1,1 @@
-# Oh My Zsh custom config
+### Oh My Zsh config
