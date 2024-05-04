@@ -15,14 +15,30 @@ alias gs='git status'
 #alias gsd='git push origin dev'
 #alias gsp='git push origin production'
 #alias gss='git push origin staging'
-alias ll='ls -al'
-alias ls='ls -GFh'
-alias grep='grep --color'
+
+# enable color support of ls and also add handy aliases
+  if [ -x /usr/bin/dircolors ]; then
+      test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+      alias ls='ls --color=auto'
+      alias dir='dir --color=auto'
+      alias vdir='vdir --color=auto'
+      alias grep='grep --color=auto'
+      alias fgrep='fgrep --color=auto'
+      alias egrep='egrep --color=auto'
+  fi
+
+# some more ls aliases
+    alias ll='ls -alF'
+    alias la='ls -A'
+    alias l='ls -CF'
+
 
 alias prettify='python -mjson.tool'
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+alias u='uname'
 
 alias tls='tmux list-sessions'
 alias tka='tmux kill-server'
