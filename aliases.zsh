@@ -42,7 +42,7 @@ alias u='uname'
 
 alias tls='tmux list-sessions'
 alias tka='tmux kill-server'
-tn () { tmux new -s "$1"; }
+tn () { tmux -u new -s "$1"; }
 ta () { tmux attach -t "$1"; }
 
 pidport () { lsof -n -i4TCP:$1 | grep LISTEN; }
