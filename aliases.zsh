@@ -79,7 +79,7 @@ alias show_options='shopt'                  # Show_options: display bash options
 alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
 # mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
-trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
+trash () { command mv "$@" ~/.Trash/; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 
 mans () {
@@ -95,6 +95,11 @@ zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP arch
 #alias make1mb='mkfile 1m ./1MB.dat'         # make1mb:      Creates a file of 1mb size (all zeros)
 #alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5mb size (all zeros)
 #alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10mb size (all zeros)
+
+
+disk_usage () { 
+  du -cha --max-depth=1 ${1-.} | grep -E "^[0-9\.]*[MG]"
+}
 
 #   extract:  Extract most know archives with one command
 #   ---------------------------------------------------------
@@ -181,6 +186,7 @@ alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only
 alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
 alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
 alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
+alias listening='sudo lsof -i -P -n | grep LISTEN'
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
 #   ii:  display useful host related informaton
