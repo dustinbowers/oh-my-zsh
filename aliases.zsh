@@ -1,16 +1,14 @@
 alias szsh='source ~/.oh-my-zsh/oh-my-zsh.sh'
 
-alias composer="php /usr/local/bin/composer.phar"
-alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
-alias gb='git branch'
+#alias gb='git branch'
 #alias gcd='git checkout dev'
 #alias gcp='git checkout production'
 #alias gcs='git checkout staging'
-alias gd='git diff'
+#alias gd='git diff'
 #alias gmd='git merge dev'
 #alias gms='git merge staging'
 #alias gpd='git pull origin dev'
-#alias gps='git pull origin staging'
+##alias gps='git pull origin staging'
 alias gs='git status'
 #alias gsd='git push origin dev'
 #alias gsp='git push origin production'
@@ -38,7 +36,7 @@ alias prettify='python -mjson.tool'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-alias u='uname'
+#alias u='uname'
 
 alias tls='tmux list-sessions'
 alias tka='tmux kill-server'
@@ -71,12 +69,12 @@ alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias edit='subl'                           # edit:         Opens any file in sublime editor
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
-alias ~="cd ~"                              # ~:            Go Home
-alias c='clear'                             # c:            Clear terminal display
+#alias ~="cd ~"                              # ~:            Go Home
+#alias c='clear'                             # c:            Clear terminal display
 alias which='type -all'                     # which:        Find executables
 alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
-alias show_options='shopt'                  # Show_options: display bash options settings
-alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
+#alias show_options='shopt'                  # Show_options: display bash options settings
+#alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
 # mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 trash () { command mv "$@" ~/.Trash/; }     # trash:        Moves a file to the MacOS trash
