@@ -1,19 +1,4 @@
-alias szsh='source ~/.oh-my-zsh/oh-my-zsh.sh'
-
-#alias gb='git branch'
-#alias gcd='git checkout dev'
-#alias gcp='git checkout production'
-#alias gcs='git checkout staging'
-#alias gd='git diff'
-#alias gmd='git merge dev'
-#alias gms='git merge staging'
-#alias gpd='git pull origin dev'
-##alias gps='git pull origin staging'
-alias gs='git status'
-#alias gsd='git push origin dev'
-#alias gsp='git push origin production'
-#alias gss='git push origin staging'
-
+#
 # enable color support of ls and also add handy aliases
   if [ -x /usr/bin/dircolors ]; then
       test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -36,7 +21,6 @@ alias prettify='python -mjson.tool'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-#alias u='uname'
 
 alias tls='tmux list-sessions'
 alias tka='tmux kill-server'
