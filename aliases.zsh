@@ -16,6 +16,10 @@
     alias l='ls -CF'
 
 
+#   ------------------------------------
+#   1. My Miscellaneous custom stuff
+#   ------------------------------------
+
 alias prettify='python -mjson.tool'
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
@@ -31,6 +35,8 @@ pidport () { lsof -n -i4TCP:$1 | grep LISTEN; }
 
 alias phpsh='docker-compose run php /bin/sh'
 alias docker-volumes='docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh'
+
+alias loc='find . -type f -print0 | xargs -0 wc -l | tail -n 1'
 
 
 
