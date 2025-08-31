@@ -177,6 +177,7 @@ alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listenin
 alias listening='sudo lsof -i -P -n | grep LISTEN'
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
+
 #   ii:  display useful host related informaton
 #   -------------------------------------------------------------------
     ii() {
